@@ -8,6 +8,10 @@ GLfloat gProjectionScale = 1.f;
 
 bool initGL()
 {
-	//initialize project matrix
+	//initialize projection matrix
 	glMatrixMode( GL_PROJECTION );
+	glLoadIdentity();
+	glOrtho( 0.0, SCREEN_WIDTH, SCREEN_HEIGHT, 0.0, 1.0, -1.0 );
+
+	return true;
 }

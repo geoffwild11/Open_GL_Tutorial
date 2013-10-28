@@ -8,6 +8,11 @@
 #ifndef LUTIL_H_
 #define LUTIL_H_
 
+#include <GL/freeglut.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <stdio.h>
+
 // Screen size for app
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;

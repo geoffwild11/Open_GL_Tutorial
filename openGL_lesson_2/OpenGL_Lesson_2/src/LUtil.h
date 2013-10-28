@@ -42,7 +42,35 @@ bool initGL();
  ***********************************************************/
 void update();
 
+/************************************************************
+ * FUNCTION: render()										*
+ * PURPOSE: Renders the scene								*
+ * PRE-CONDITION: 											*
+ * 	1) Valid OpenGL context									*
+ * 	2) Active modelview matrix								*
+ * POST-CONDITION: Renders the scene						*
+ * SIDE EFFECTS:											*
+ * 	1) Clears color buffer									*
+ * 	2) Swaps front and back buffer							*
+ * 	3) Sets matrix mode to modelview						*
+ * 	4) Translates modelview matrix to the center of the 	*
+ * 		default screen										*
+ * 	5) Changes the rendering color							*
+ ***********************************************************/
+void render();
 
+/************************************************************
+ * FUNCTION: handleKeys( unsigned char key, int x, int y )	*
+ * PURPOSE: Handles what happens if a key has been pressed	*
+ * PRE-CONDITION: None										*
+ * POST-CONDITION:											*
+ * 	1) Toggles the color mode when use presses q			*
+ * 	2) Cycles through different projection scales when 'e'	*
+ * 		key is pressed										*
+ * SIDE EFFECTS: If user presses 'e', matrix mode set to 	*
+ * 					projection								*
+ ***********************************************************/
+void handleKeys( unsigned char key, int x, int y );
 
 
 #endif /* LUTIL_H_ */
